@@ -1,4 +1,4 @@
-# 
+# Note Taker
 describe
 
 
@@ -13,6 +13,6 @@ describe
 
 
 ## References:
-
+Inspired by #11 Express from UTA-VIRT-FSF-FT-03-2022-U-LOL
 
 ## Development Process (See commits for more details):
