@@ -1,7 +1,7 @@
 const notes = require('express').Router();
 const { readFromFile, readAndAppend } = require('../helpers/fsUtils');
 const uuid = require('../helpers/uuid');
-const notesArr = require('.db/db');
+const notesArr = require('../db/db');
 
 // GET Route for retrieving stored notes
 notes.get('/api/notes', (req, res) => {
@@ -33,14 +33,16 @@ notes.delete('/api/notes/:id', (req, res) => {
       const noteId = req.params.id;
       for (let i = 0; i < notesArr.length; i++) {
         const currentNote = notesArr[i];
-        if (currentNote.id === reviewId) {
-          res.json(currentNote);
-          return;
+        if (currentNote.id === noteId) {
+            // removes 1 note from note array at given index
+            notesArr.splice(i, 1);
+            res.json(`You have successfully deleted`, currentNote);
+            return;
         }
       }
-      res.status(404).send('Note not found');
+        res.status(404).send('Note not found');
     } else {
-      res.status(400).send('Note ID not provided');
+        res.status(400).send('Note ID not provided');
     }
   });
 
