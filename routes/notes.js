@@ -9,7 +9,7 @@ console.log('notesArr', notesArr);
 console.log('\n ------Routes: Notes.js------- \n');
 
 // GET Route for retrieving stored notes
-notesRouter.get('/notes', (req, res) => {
+notesRouter.get('/', (req, res) => {
   console.log('\nGET was called in Notes.js\n', req.method);
   readFromFile('/db/db.json').then((data) => res.json(JSON.parse(data)));
 });
