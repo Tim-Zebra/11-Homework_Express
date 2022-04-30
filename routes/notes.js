@@ -1,5 +1,5 @@
 const notesRouter = require('express').Router();
-const { readFromFile, readAndAppend } = require('../helpers/fsUtils');
+const { readFromFile, readAndAppend, writeToFile } = require('../helpers/fsUtils');
 const uuid = require('../helpers/uuid');
 
 // required for delete option
@@ -44,7 +44,8 @@ notesRouter.delete('/:id', (req, res) => {
         if (currentNote.id === noteId) {
             // removes 1 note from note array at given index
             notesArr.splice(i, 1);
-            res.json(`You have successfully deleted`, currentNote);
+            writeToFile('./db/db.json', notesArr);
+            res.status(`You have successfully deleted ${currentNote}`);
             return;
         }
       }
