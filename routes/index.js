@@ -1,10 +1,13 @@
-const router = require('express').Router();
+const exp = require('constants');
+const express = require('express');
 // Import our modular routers for notes router
 const notesRouter = require('./notes');
 
 console.log('\n -----Routers: index.js------ \n');
 
-// Adds the notes router to our index. 
-router.use('/notes', notesRouter);
+const app = express();
 
-module.exports = router;
+// Adds the notes router to our index. 
+app.use('/notes', notesRouter);
+
+module.exports = app;
