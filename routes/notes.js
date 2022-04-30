@@ -11,11 +11,11 @@ console.log('\n ------Routes: Notes.js------- \n');
 // GET Route for retrieving stored notes
 notesRouter.get('/', (req, res) => {
   console.log('\nGET was called in Notes.js\n', req.method);
-  readFromFile('/db/db.json').then((data) => res.json(JSON.parse(data)));
+  readFromFile('./db/db.json').then((data) => res.json(JSON.parse(data)));
 });
 
 // POST Route for a new note
-notesRouter.post('/notes', (req, res) => {
+notesRouter.post('/', (req, res) => {
   console.log('\n POST was called in Notes.js\n');
   const { title, text } = req.body;
 
@@ -34,7 +34,7 @@ notesRouter.post('/notes', (req, res) => {
 });
 
 // DELETE Route to delete a note based off id
-notesRouter.delete('/notes/:id', (req, res) => {
+notesRouter.delete('/:id', (req, res) => {
   console.log('\n DELETE was called in Notes.js\n');  
   if (req.params.id) {
       console.info(`${req.method} request received to delete a note`);
