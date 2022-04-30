@@ -2,7 +2,7 @@ const router = require('express').Router();
 // Import our modular routers for notes router
 const notesRouter = require('./notes');
 
-console.log('\nRouter: index.js was routed to\n');
+console.log('\n -----Routers: index.js------ \n');
 
 // Adds the notes router to our index. 
 router.use('/notes', notesRouter);
