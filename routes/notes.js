@@ -11,7 +11,7 @@ console.log('\n routes: Notes.js Was routed \n');
 // GET Route for retrieving stored notes
 notesRouter.get('/notes', (req, res) => {
   console.log('\nGET was called in Notes.js\n', req.method);
-  readFromFile('./db/db.json').then((data) => res.json(JSON.parse(data)));
+  readFromFile('../db/db.json').then((data) => res.json(JSON.parse(data)));
 });
 
 // POST Route for a new note

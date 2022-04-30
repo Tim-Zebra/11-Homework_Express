@@ -1,8 +1,10 @@
 // Imports functions and other routes
 const express = require('express');
 const path = require('path');
+const { clog } = require('./middleware/clog');
 const api = require('./routes/index.js');
 
+// Starts port for Heroku
 const PORT = process.env.PORT || 3001;
 
 const app = express();
@@ -10,23 +12,28 @@ const app = express();
 // Middleware for parsing JSON and urlencoded form data
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(express.static('public'));
 app.use('/api', api);
 
+// Built in middleware for 'express'
+app.use(express.static('public'));
 
+// Import custom middleware, "cLog"
+app.use(clog);
 
-// GET Route for homepage
+// Routes to HTML
+// index.html route
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, '/public/index.html'));
-  console.log('\n GET " / " was called \n');
+  console.log('\n GET "/" was called \n');
 });
 
-// GET Route for notes page
+// notes.html route
 app.get('/notes', (req, res) => {
   res.sendFile(path.join(__dirname, '/public/notes.html'));
   console.log('\n GET "/notes" was called \n');
 });
 
+// starts server
 app.listen(PORT, () =>
   console.log(`App listening at http://localhost:${PORT} 🚀`)
 );
