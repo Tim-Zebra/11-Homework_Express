@@ -9,8 +9,8 @@ To delete a note, click the red trash can next to your list of saved notes <br /
 To view an old note, click the title text of your note in the left hand column 
 
 ## Website Visual Demo(Gif/video):
-![Banner](./demos/) <br />
-<a href="https://drive.google.com/file/d/1ooY62tXFfTGtb6Zwo6NdX7uYAVYfwMk5/view">Video Demo</a>
+![Banner](./demos/demo_noteTakerGIF.gif) <br />
+<a href="https://drive.google.com/file/d/19yN05NFVuOfHygIOOkLUGMSX2VOViR-p/view">Video Demo</a>
 
 ## Link to Deployed Page:
 https://timzebranotetaker.herokuapp.com/notes
