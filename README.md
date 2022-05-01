@@ -14,7 +14,7 @@ To view an old note, click the title text of your note in the left hand column
 <a href="https://drive.google.com/file/d/19yN05NFVuOfHygIOOkLUGMSX2VOViR-p/view">Video Demo</a>
 
 ## Link to Deployed Page:
-https://timzebranotetaker.herokuapp.com/notes
+https://timzebranotetaker.herokuapp.com/
 
 ## References:
 Inspired by #11 Express from: UTA-VIRT-FSF-FT-03-2022-U-LOL <br />
