@@ -1,7 +1,6 @@
 // Imports functions and other routes
 const express = require('express');
 const path = require('path');
-const { clog } = require('./middleware/clog');
 const api = require('./routes/index.js');
 
 // Starts port for Heroku
@@ -16,9 +15,6 @@ app.use('/api', api);
 
 // Built in middleware for 'express'
 app.use(express.static('public'));
-
-// Import custom middleware, "cLog"
-app.use(clog);
 
 // Routes to HTML
 // index.html route

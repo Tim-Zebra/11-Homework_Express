@@ -1,22 +1,18 @@
+// Imports
 const notesRouter = require('express').Router();
 const { readFromFile, readAndAppend, writeToFile } = require('../helpers/fsUtils');
 const uuid = require('../helpers/uuid');
 
-// required for delete option
+// Required for delete option
 const notesArr = require('../db/db.json');
-console.log('notesArr', notesArr);
-
-console.log('\n ------Routes: Notes.js------- \n');
 
 // GET Route for retrieving stored notes
 notesRouter.get('/', (req, res) => {
-  console.log('\nGET was called in Notes.js\n', req.method);
   readFromFile('./db/db.json').then((data) => res.json(JSON.parse(data)));
 });
 
 // POST Route for a new note
 notesRouter.post('/', (req, res) => {
-  console.log('\n POST was called in Notes.js\n');
   const { title, text } = req.body;
 
   if (req.body) {
@@ -34,8 +30,7 @@ notesRouter.post('/', (req, res) => {
 });
 
 // DELETE Route to delete a note based off id
-notesRouter.delete('/:id', (req, res) => {
-  console.log('\n DELETE was called in Notes.js\n');  
+notesRouter.delete('/:id', (req, res) => { 
   if (req.params.id) {
       console.info(`${req.method} request received to delete a note`);
       const noteId = req.params.id;

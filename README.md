@@ -9,6 +9,7 @@ To delete a note, click the red trash can next to your list of saved notes <br /
 To view an old note, click the title text of your note in the left hand column 
 
 ## Website Visual Demo(Gif/video):
+![Banner](./demos/demo_IntroPagePIC.png) <br />
 ![Banner](./demos/demo_noteTakerGIF.gif) <br />
 <a href="https://drive.google.com/file/d/19yN05NFVuOfHygIOOkLUGMSX2VOViR-p/view">Video Demo</a>
 
@@ -23,4 +24,4 @@ Favicon obtained from: https://icons8.com/icons/set/note
 Reviewed acceptance criteria and added pseudocode <br />
 Created routes and tested each one before deploying <br />
 Edited public HTML's and JS's to ensure proper front end syntax <br />
-Tested with live server <br />
+Tested with live server
