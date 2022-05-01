@@ -1,22 +1,17 @@
 [
     {
-        "title": "smart ideas",
-        "text": "read books",
-        "id": "2e5d"
-    },
-    {
         "title": "When crossing the street",
         "text": "Look both ways, turn 90 degrees, then look both ways as well. Helps if you're in the middle of the street",
         "id": "35ad"
     },
     {
-        "title": "Learning",
-        "text": "Find what works best for you. Maybe self investment?",
-        "id": "d1c3"
-    },
-    {
         "title": "Making $$$",
         "text": "Don't have separate scripts for money and happiness. Do a .join",
         "id": "cb40"
+    },
+    {
+        "title": "Smile is good :)",
+        "text": "TRy iot!!!",
+        "id": "329c"
     }
 ]
