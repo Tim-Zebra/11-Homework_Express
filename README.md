@@ -16,7 +16,8 @@ To view an old note, click the title text of your note in the left hand column
 https://timzebranotetaker.herokuapp.com/notes
 
 ## References:
-Inspired by #11 Express from UTA-VIRT-FSF-FT-03-2022-U-LOL
+Inspired by #11 Express from: UTA-VIRT-FSF-FT-03-2022-U-LOL <br />
+Favicon obtained from: https://icons8.com/icons/set/note
 
 ## Development Process (See commits for more details):
 Reviewed acceptance criteria and added pseudocode <br />
